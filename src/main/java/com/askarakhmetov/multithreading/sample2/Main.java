@@ -2,7 +2,7 @@ package com.askarakhmetov.multithreading.sample2;
 
 /**
  * Пример использования synchronized
- * <p>
+ * <br/>
  * Есть общий (разделяемый) ресурс для всех потоков (счетчик Counter), доступ к которому нужно синхронизировать.
  * Для этого метод increment в классе Counter объявлен с модификатором synchronized.
  * Без synchronized итоговое значение счетчика может быть любым при каждом запуске,
