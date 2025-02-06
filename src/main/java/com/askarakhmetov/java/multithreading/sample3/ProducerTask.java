@@ -1,6 +1,6 @@
 package com.askarakhmetov.java.multithreading.sample3;
 
-import com.askarakhmetov.util.Utils;
+import com.askarakhmetov.java.util.Utils;
 
 import java.util.Queue;
 import java.util.Random;

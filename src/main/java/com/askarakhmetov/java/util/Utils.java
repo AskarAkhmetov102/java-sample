@@ -1,4 +1,4 @@
-package com.askarakhmetov.util;
+package com.askarakhmetov.java.util;
 
 import org.apache.commons.lang3.RandomStringUtils;
 
