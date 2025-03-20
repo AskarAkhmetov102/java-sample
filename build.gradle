@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.askarakhmetov'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.apache.groovy:groovy:4.0.23"
+    implementation "org.apache.commons:commons-lang3:3.17.0"
+    implementation "com.google.guava:guava:33.4.0-jre"
+
+    // Hibernate
+    implementation "org.hibernate.orm:hibernate-core:6.6.6.Final"
+    runtimeOnly "org.postgresql:postgresql:42.7.4"
+
+    // Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+
+    // JUnit
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
