@@ -1,3 +1,9 @@
+#Maven
 target
+
+#Gradle
 build
+.gradle
+
+#Intellij IDEA
 .idea
