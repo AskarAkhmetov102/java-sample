@@ -25,6 +25,9 @@ dependencies {
     // JUnit
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    // CGLIB
+    implementation "cglib:cglib:3.3.0"
 }
 
 test {
