@@ -5,13 +5,18 @@ plugins {
 group = 'com.askarakhmetov'
 version = '1.0-SNAPSHOT'
 
+// Компиляция Java
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
     implementation "org.apache.groovy:groovy:4.0.23"
-    implementation "org.apache.commons:commons-lang3:3.17.0"
+    implementation 'org.apache.commons:commons-lang3:3.18.0'
     implementation "com.google.guava:guava:33.4.0-jre"
 
     // Hibernate
@@ -22,12 +27,12 @@ dependencies {
     compileOnly 'org.projectlombok:lombok:1.18.38'
     annotationProcessor 'org.projectlombok:lombok:1.18.38'
 
-    // JUnit
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-
     // CGLIB
     implementation "cglib:cglib:3.3.0"
+
+    // JUnit
+    testImplementation platform('org.junit:junit-bom:5.10.5')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
 }
 
 test {
