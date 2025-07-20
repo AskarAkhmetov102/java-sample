@@ -19,10 +19,6 @@ dependencies {
     implementation 'org.apache.commons:commons-lang3:3.18.0'
     implementation "com.google.guava:guava:33.4.0-jre"
 
-    // Hibernate
-    implementation "org.hibernate.orm:hibernate-core:6.6.6.Final"
-    runtimeOnly "org.postgresql:postgresql:42.7.4"
-
     // Lombok
     compileOnly 'org.projectlombok:lombok:1.18.38'
     annotationProcessor 'org.projectlombok:lombok:1.18.38'
