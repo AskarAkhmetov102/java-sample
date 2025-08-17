@@ -1,3 +1,4 @@
 rootProject.name = 'java-sample'
 
 include 'grpc-sample'
+include 'hibernate-sample'
