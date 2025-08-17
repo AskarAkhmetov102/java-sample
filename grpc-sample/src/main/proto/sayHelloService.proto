@@ -1,0 +1,33 @@
+//version of Protocol Buffers
+syntax = "proto3";
+//versions after proto3
+//edition = "2023";
+
+//https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/descriptor.proto
+// If enabled, then the Java code generator will generate a separate .java
+// file for each top-level message, enum, and service defined in the .proto
+// file.
+option java_multiple_files = true;
+
+//https://github.com/protocolbuffers/protobuf/blob/main/src/google/protobuf/descriptor.proto
+// Sets the Java package where classes generated from this .proto will be
+// placed.  By default, the proto package is used, but this is often
+// inappropriate because proto packages do not normally start with backwards
+// domain names.
+option java_package = "com.askarakhmetov.grpc";
+
+//the 'package' specifier is used as the Java package, unless you explicitly provide an option java_package
+//package com.askarakhmetov.grpc;
+
+service HelloService {
+  rpc hello(HelloRequest) returns (HelloResponse);
+}
+
+message HelloRequest {
+  string firstName = 1;
+  string lastName = 2;
+}
+
+message HelloResponse {
+  string greeting = 1;
+}
